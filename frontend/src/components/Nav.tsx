@@ -1,6 +1,6 @@
 // import React from 'react'
 export const Nav = () => {
   return (
-    <div>Nav</div>
+    <div id="navContainer">Nav</div>
   )
 }
