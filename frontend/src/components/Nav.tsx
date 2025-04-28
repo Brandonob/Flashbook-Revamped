@@ -4,12 +4,14 @@ import messageIcon from '../assets/messageIcon.png'
 import notificationIcon from '../assets/notificationIcon.png'
 import avatarIcon from '../assets/avatarIcon.png'
 import thunderIcon from '../assets/thunderIcon.png'
+import searchIcon from '../assets/searchIcon.png'
 // import React from 'react'
 export const Nav = () => {
     const searchBar = () => {
         return (
             <div id="searchBar">
-                <input className='searchInput' type="text" placeholder="Search" />
+                <img src={searchIcon} alt="logo" className='searchIcon' />
+                <input className='searchInput' type="text" placeholder="Search Flashbook" />
             </div>
         )
     }
