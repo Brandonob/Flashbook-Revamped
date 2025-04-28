@@ -67,8 +67,10 @@ table {
 
 #navLeft {
   display: flex;
+  align-items: center;
   width: 25%;
   height: 100%;
+  margin-left: 14px;
   /* background-color: red; */
 }
 
@@ -79,14 +81,19 @@ table {
 }
 
 #navRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 6px;
   width: 25%;
   height: 100%;
   /* background-color: green; */
 }
 
-.fbLogo {
-  width: 40px;
-  height: 40px;
+.fbIcon {
+  width: 45px;
+  height: 45px;
+  margin-right: 8px;
   /* object-fit: contain; */
 }
 
@@ -96,8 +103,36 @@ table {
   border: none;
   outline: none;
   border-radius: 20px;
-  background-color: #F3F4F7;
+  background-color: #e2e5e9;
   /* padding-left: 10px; */
+}
+
+.navRightIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #e2e5e9;
+}
+
+.navRightIcon:hover {
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+.navRightIcon img {
+  width: 28px;
+  height: 28px;
+}
+
+.thunderIcon {
+  position: absolute;
+  height: 20px;
+  width: 15px;
+  transform: rotate(64deg) scaleX(-1.0);
 }
 
 
