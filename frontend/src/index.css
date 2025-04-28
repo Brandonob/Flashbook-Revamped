@@ -66,24 +66,39 @@ table {
 }
 
 #navLeft {
+  display: flex;
   width: 25%;
   height: 100%;
-  background-color: red;
+  /* background-color: red; */
 }
 
 #navCenter {
   width: 50%;
   height: 100%;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 #navRight {
   width: 25%;
   height: 100%;
-  background-color: green;
+  /* background-color: green; */
 }
 
+.fbLogo {
+  width: 40px;
+  height: 40px;
+  /* object-fit: contain; */
+}
 
+.searchInput {
+  width: 240px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: #F3F4F7;
+  /* padding-left: 10px; */
+}
 
 
 
