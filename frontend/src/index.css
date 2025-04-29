@@ -142,9 +142,31 @@ table {
   cursor: pointer;
 }
 
+.navRightIcon.active {
+  background-color: #8fef0026;
+  /* filter: drop-shadow(0px 100px 0 #118800);
+  transform: translateY(-100px); */
+}
+.navRightIcon.active > img {
+  filter: drop-shadow(0px 100px 0 #7ed200);
+  transform: translateY(-100px);
+}
+.navRightIcon.active > .thunderIcon {
+  filter: drop-shadow(0px 100px 0 #8fef0026) !important;
+  transform: translateY(-100px);
+}
+
 .navRightIcon img {
   width: 28px;
   height: 28px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: 200px;
+  height: 100px;
 }
 
 .thunderIcon {

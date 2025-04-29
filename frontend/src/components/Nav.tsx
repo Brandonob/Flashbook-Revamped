@@ -15,6 +15,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 export const Nav = () => {
     const location = useLocation()
     const navigate = useNavigate()
+    const [activeDropdown, setActiveDropdown] = useState('home')
 
     // Map path to tab name
     const pathToTab: Record<string, string> = {
@@ -80,18 +81,30 @@ export const Nav = () => {
             </div>
         </div>
         <div id="navRight">
-            <section className='navRightIcon'>
+            <section className={`navRightIcon ${activeDropdown === 'menu' ? 'active' : ''}`} onClick={() => setActiveDropdown(activeDropdown === 'menu' ? '' : 'menu')}>
                 <img src={menuIcon} alt="logo" className='menuIcon' />
+                {activeDropdown === 'menu' && (
+                    <div className="dropdown">Menu Dropdown</div>
+                )}
             </section>
-            <section className='navRightIcon'>
+            <section className={`navRightIcon ${activeDropdown === 'messages' ? 'active' : ''}`} onClick={() => setActiveDropdown(activeDropdown === 'messages' ? '' : 'messages')}>
                 <img src={messageIcon} alt="logo" className='messageIcon' />
                 <img src={thunderIcon} alt="logo" className='thunderIcon' />
+                {activeDropdown === 'messages' && (
+                    <div className="dropdown">Messages Dropdown</div>
+                )}
             </section>
-            <section className='navRightIcon'>
+            <section className={`navRightIcon ${activeDropdown === 'notifications' ? 'active' : ''}`} onClick={() => setActiveDropdown(activeDropdown === 'notifications' ? '' : 'notifications')}>
                 <img src={notificationIcon} alt="logo" className='notificationIcon' />
+                {activeDropdown === 'notifications' && (
+                    <div className="dropdown">Notifications Dropdown</div>
+                )}
             </section>
-            <section className='navRightIcon'>
+            <section className={`navRightIcon ${activeDropdown === 'profile' ? 'active' : ''}`} onClick={() => setActiveDropdown(activeDropdown === 'profile' ? '' : 'profile')}>
                 <img src={avatarIcon} alt="logo" className='profileIcon' />
+                {activeDropdown === 'profile' && (
+                    <div className="dropdown">Profile Dropdown</div>
+                )}
             </section>
         </div>
     </div>
