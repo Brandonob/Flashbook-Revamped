@@ -75,6 +75,9 @@ table {
 }
 
 #navCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50%;
   height: 100%;
   /* background-color: blue; */
@@ -149,6 +152,24 @@ table {
   height: 20px !important;
   width: 15px !important;
   transform: rotate(64deg) scaleX(-1.0);
+}
+
+.navCenterIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 110px;
+}
+
+.navCenterIcon img {
+  width: 28px;
+  height: 28px;
+}
+
+.videoIcon {
+  width: 32px !important;
+  height: 32px !important;
 }
 
 
