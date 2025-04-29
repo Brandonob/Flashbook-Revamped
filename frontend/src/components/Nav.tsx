@@ -10,12 +10,32 @@ import videoIcon from '../assets/videoIcon.png'
 import marketplaceIcon from '../assets/marketplaceIcon.png'
 import groupsIcon from '../assets/groupsIcon.png'
 import homeIcon from '../assets/homeIcon.png'
+import { useLocation, useNavigate } from 'react-router-dom'
 // import React from 'react'
 export const Nav = () => {
-    const [activeTab, setActiveTab] = useState('home')
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    // Map path to tab name
+    const pathToTab: Record<string, string> = {
+        '/': 'home',
+        '/video': 'video',
+        '/marketplace': 'marketplace',
+        '/groups': 'groups'
+    }
+
+    // Determine active tab from current path
+    const activeTab = pathToTab[location.pathname] || 'home'
 
     const handleTabClick = (tab: string) => {
-        setActiveTab(tab)
+        // Map tab name to path
+        const tabToPath: Record<string, string> = {
+            home: '/',
+            video: '/video',
+            marketplace: '/marketplace',
+            groups: '/groups'
+        }
+        navigate(tabToPath[tab])
     }
 
     const searchBar = () => {

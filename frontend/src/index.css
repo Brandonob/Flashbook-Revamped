@@ -163,6 +163,7 @@ table {
   border-radius: 10px;
   border: none;
   background-color: white;
+  overflow: hidden;
 }
 
 .navCenterIcon:hover {
@@ -173,6 +174,14 @@ table {
 .navCenterIcon img {
   width: 28px;
   height: 28px;
+}
+
+.navCenterIcon.active img {
+  filter: drop-shadow(0px 100px 0 #118800);
+  transform: translateY(-100px);
+  /* filter: opacity(0.5) drop-shadow(0 0 0 #62A500); */
+  /* fill: #62A500; */
+  /* background-color: #62A500; */
 }
 
 .navCenterBtns {
