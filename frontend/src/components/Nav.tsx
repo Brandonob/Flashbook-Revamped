@@ -50,7 +50,9 @@ export const Nav = () => {
   return (
     <div id="navContainer">
         <div id="navLeft">
-            <img src={fbIcon} alt="logo" className='fbIcon' />
+            <a href="/">
+                <img src={fbIcon} alt="logo" className='fbIcon' />
+            </a>
             {searchBar()}
         </div>
         <div id="navCenter">
