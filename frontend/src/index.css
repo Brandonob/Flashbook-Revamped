@@ -198,5 +198,14 @@ table {
   height: 32px !important;
 }
 
+.navBtnContainer {
+  height: 49px;
+  display: flex;
+  align-items: center;
+}
+
+.navBtnContainer.active {
+  border-bottom: 2px solid #62A500;
+}
 
 

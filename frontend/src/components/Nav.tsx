@@ -49,27 +49,35 @@ export const Nav = () => {
 
   return (
     <div id="navContainer">
-        <section id="navLeft">
+        <div id="navLeft">
             <img src={fbIcon} alt="logo" className='fbIcon' />
             {searchBar()}
-        </section>
-        <section id="navCenter">
+        </div>
+        <div id="navCenter">
             <div className='navCenterBtns'>
-                <button className={`navCenterIcon ${activeTab === 'home' ? 'active' : ''}`} onClick={() => handleTabClick('home')}>
-                    <img src={homeIcon} alt="logo" className='homeIcon' />
-                </button>
-                <button className={`navCenterIcon ${activeTab === 'video' ? 'active' : ''}`} onClick={() => handleTabClick('video')}>
-                    <img src={videoIcon} alt="logo" className='videoIcon' />
-                </button>
-                <button className={`navCenterIcon ${activeTab === 'marketplace' ? 'active' : ''}`} onClick={() => handleTabClick('marketplace')}>
-                    <img src={marketplaceIcon} alt="logo" className='marketplaceIcon' />
-                </button>
-                <button className={`navCenterIcon ${activeTab === 'groups' ? 'active' : ''}`} onClick={() => handleTabClick('groups')}>
-                    <img src={groupsIcon} alt="logo" className='groupsIcon' />
-                </button>
+                <section className={`navBtnContainer ${activeTab === 'home' ? 'active' : ''}`}>
+                    <button className={`navCenterIcon ${activeTab === 'home' ? 'active' : ''}`} onClick={() => handleTabClick('home')}>
+                        <img src={homeIcon} alt="logo" className='homeIcon' />
+                    </button>
+                </section>
+                <section className={`navBtnContainer ${activeTab === 'video' ? 'active' : ''}`}>
+                    <button className={`navCenterIcon ${activeTab === 'video' ? 'active' : ''}`} onClick={() => handleTabClick('video')}>
+                        <img src={videoIcon} alt="logo" className='videoIcon' />
+                    </button>
+                </section>
+                <section className={`navBtnContainer ${activeTab === 'marketplace' ? 'active' : ''}`}>
+                    <button className={`navCenterIcon ${activeTab === 'marketplace' ? 'active' : ''}`} onClick={() => handleTabClick('marketplace')}>
+                        <img src={marketplaceIcon} alt="logo" className='marketplaceIcon' />
+                    </button>
+                </section>
+                <section className={`navBtnContainer ${activeTab === 'groups' ? 'active' : ''}`}>
+                    <button className={`navCenterIcon ${activeTab === 'groups' ? 'active' : ''}`} onClick={() => handleTabClick('groups')}>
+                        <img src={groupsIcon} alt="logo" className='groupsIcon' />
+                    </button>
+                </section>
             </div>
-        </section>
-        <section id="navRight">
+        </div>
+        <div id="navRight">
             <section className='navRightIcon'>
                 <img src={menuIcon} alt="logo" className='menuIcon' />
             </section>
@@ -83,7 +91,7 @@ export const Nav = () => {
             <section className='navRightIcon'>
                 <img src={avatarIcon} alt="logo" className='profileIcon' />
             </section>
-        </section>
+        </div>
     </div>
   )
 }
