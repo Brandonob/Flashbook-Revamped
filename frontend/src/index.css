@@ -159,12 +159,29 @@ table {
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 110px;
+  width: 114px;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+}
+
+.navCenterIcon:hover {
+  background-color: #e2e5e98d;
+  cursor: pointer;
 }
 
 .navCenterIcon img {
   width: 28px;
   height: 28px;
+}
+
+.navCenterBtns {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  width: 75%;
+  height: -webkit-fill-available;
+  margin: 4px;
 }
 
 .videoIcon {

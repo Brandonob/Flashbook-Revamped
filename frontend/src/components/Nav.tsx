@@ -13,7 +13,11 @@ import homeIcon from '../assets/homeIcon.png'
 // import React from 'react'
 export const Nav = () => {
     const [activeTab, setActiveTab] = useState('home')
-    
+
+    const handleTabClick = (tab: string) => {
+        setActiveTab(tab)
+    }
+
     const searchBar = () => {
         return (
             <div id="searchBar">
@@ -30,18 +34,20 @@ export const Nav = () => {
             {searchBar()}
         </section>
         <section id="navCenter">
-            <section className='navCenterIcon'>
-                <img src={homeIcon} alt="logo" className='homeIcon' />
-            </section>
-            <section className='navCenterIcon'>
-                <img src={videoIcon} alt="logo" className='videoIcon' />
-            </section>
-            <section className='navCenterIcon'>
-                <img src={marketplaceIcon} alt="logo" className='marketplaceIcon' />
-            </section>
-            <section className='navCenterIcon'>
-                <img src={groupsIcon} alt="logo" className='groupsIcon' />
-            </section>
+            <div className='navCenterBtns'>
+                <button className={`navCenterIcon ${activeTab === 'home' ? 'active' : ''}`} onClick={() => handleTabClick('home')}>
+                    <img src={homeIcon} alt="logo" className='homeIcon' />
+                </button>
+                <button className={`navCenterIcon ${activeTab === 'video' ? 'active' : ''}`} onClick={() => handleTabClick('video')}>
+                    <img src={videoIcon} alt="logo" className='videoIcon' />
+                </button>
+                <button className={`navCenterIcon ${activeTab === 'marketplace' ? 'active' : ''}`} onClick={() => handleTabClick('marketplace')}>
+                    <img src={marketplaceIcon} alt="logo" className='marketplaceIcon' />
+                </button>
+                <button className={`navCenterIcon ${activeTab === 'groups' ? 'active' : ''}`} onClick={() => handleTabClick('groups')}>
+                    <img src={groupsIcon} alt="logo" className='groupsIcon' />
+                </button>
+            </div>
         </section>
         <section id="navRight">
             <section className='navRightIcon'>
